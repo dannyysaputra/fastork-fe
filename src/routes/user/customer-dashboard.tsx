@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import Navbar from "../../components/navbar";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { format } from "date-fns";

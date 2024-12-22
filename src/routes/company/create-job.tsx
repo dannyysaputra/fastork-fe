@@ -26,7 +26,7 @@ export default function CreateJob() {
   const user = userDataString ? JSON.parse(userDataString) : null;
   const navigate = useNavigate();
 
-  const handleChange = (e) => {
+  const handleChange = (e: any) => {
     const { name, value } = e.target;
     setFormData({
       ...formData,
@@ -46,7 +46,7 @@ export default function CreateJob() {
       );
       alert(response.data.message); // Menampilkan pesan sukses
       navigate("/company");
-    } catch (error) {
+    } catch (error: any) {
       alert(error.response?.data?.detail || "Terjadi kesalahan");
     }
   };

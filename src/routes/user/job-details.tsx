@@ -26,7 +26,7 @@ export default function JobDetails() {
         }
         const data = await response.json();
         setJob(data);
-      } catch (err) {
+      } catch (err: any) {
         setError(err.message);
       } finally {
         setIsLoading(false);
@@ -49,7 +49,7 @@ export default function JobDetails() {
         }
       );
       setMessage(`Application submitted!`);
-    } catch (error) {
+    } catch (error: any) {
       setMessage(
         `Error: ${error.response?.data?.detail || "Something went wrong"}`
       );
